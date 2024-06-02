@@ -26,48 +26,77 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Book API using Nest.js and Prisma
 
-```bash
-$ npm install
+## Project Setup
+
+After cloning the repository, follow these steps to set up your Nest.js project:
+
+1. Navigate to the project directory:
+
+```
+cd <project_directory>
+
 ```
 
-## Running the app
+1. Install the necessary dependencies:
 
-```bash
-# development
-$ npm run start
+```
+npm install
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+1. Run the development server:
 
-```bash
-# unit tests
-$ npm run test
+```
+npm run start:dev
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
 
-## Support
+Now, your Nest.js server should be running locally.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## API Endpoints
 
-## Stay in touch
+### Get All Books
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Endpoint: `/books`
+- Method: `GET`
+- Description: Retrieves a list of all books.
 
-## License
+### Create a Book
 
-Nest is [MIT licensed](LICENSE).
+- Endpoint: `/books`
+- Method: `POST`
+- Description: Creates a new book.
+- Payload:
+
+```json
+{
+  "title": "To Kill a Mockingbird",
+  "summary": "A novel about racial injustice and the loss of innocence in the American South.",
+  "publishedDate": "2024-07-11T00:00:00Z"
+}
+
+```
+
+### Get Specific Book
+
+- Endpoint: `/books/:id`
+- Method: `GET`
+- Description: Retrieves a specific book by its ID.
+
+### Update Specific Book
+
+- Endpoint: `/books/:id`
+- Method: `PUT`
+- Description: Updates a specific book by its ID.
+- Payload:
+
+```json
+{
+  "title": "To Kill a Mockingbird",
+  "summary": "A novel about racial injustice and the loss of innocence in the American South.",
+  "publishedDate": "2024-07-11T00:00:00Z"
+}
+
+```
